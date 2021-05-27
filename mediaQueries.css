@@ -1,0 +1,79 @@
+
+
+@media (max-width: 991px) 
+{
+	.banner .imgSidebar
+	{
+		display: none;
+	}
+
+	.banner .contentBx,
+	.sidebar
+	{
+		width: 100%;
+		padding: 40px;
+	}
+
+	.logoText
+	{
+		left: 40px;
+	}
+
+	.toggle
+	{
+		right: 40px;
+	}
+
+	section
+	{
+		padding: 40px;
+	}
+
+	.about .content
+	{
+		flex-direction: column;
+		margin-top: 0;
+		align-items: center;
+	}
+
+	.about .content .textBx
+	{
+		min-width: 100%;
+		width: 100%;
+	}
+
+	.services .content
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.services .content .servicesBx
+	{
+		padding: 30px 20px;
+		max-width: 400px;
+		margin: 10px;
+	}
+
+	.work .content
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.work .content .workBx
+	{
+		transition: transform .5s;
+	}
+
+	.work .content .workBx:hover
+	{
+		background: #333;
+		transition: .5s;
+	}
+
+	.contact .content
+	{
+		flex-direction: column;
+	}
+}
