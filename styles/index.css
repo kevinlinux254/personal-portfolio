@@ -1,0 +1,425 @@
+/*
+base formatting
+===============
+*/
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-size: 18px;
+}
+
+.toggle 
+{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	background: #333;
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.toggle .active
+{
+	background: #6495ed url(close.png);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section 
+{
+	padding: 100px;
+	min-height: 100vh;
+}
+
+.banner
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.banner .imgSidebar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 100%;
+}
+
+.banner .imgSidebar img 
+{
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.banner .contentBx,
+.sidebar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100% - 500px);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px;
+}
+
+.logoText
+{
+	position: absolute;
+	top: 40px;
+	left: 100px;
+	font-size: 1.2em;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	background: #333;
+	color: #fff;
+	padding: 0 5px;
+}
+
+.banner .contentBx h4 
+{
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #333;
+}
+
+.banner .contentBx h4 span 
+{
+	color: #6495ed;
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.banner .contentBx h2
+{
+	font-size: 3em;
+	color: #333;
+	line-height: 1em;
+}
+
+p
+{
+	font-size: 1.1em;
+	margin: 20px 0;
+	font-weight: 300;
+}
+
+.btn
+{
+	background: #333;
+	color: #fff;
+	padding: 10px 30px;
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 500;
+	letter-spacing: 2px;
+	transition: transform .5s;
+}
+.btn:hover
+{
+	color: #fff;
+	background: #6495ed;
+	transition: .5s;
+}
+
+.sidebar
+{
+	position: fixed;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	padding: 40px;
+	z-index: 100;
+	right: -100%;
+}
+
+.sidebar.active
+{
+	right: 0;
+}
+.sidebar ul 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar ul li 
+{
+	list-style: none;
+}
+
+.sidebar ul li a
+{
+	color: #fff;
+	text-decoration: none;
+	font-size: 2em;
+	margin: 10px 0;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.sidebar ul li a:hover 
+{
+	color: #6495ed;
+	border-bottom: 1px solid #fff;
+}
+
+.title
+{
+	width: 100%;
+	text-align: center;
+}
+
+.title h2 
+{
+	position: relative;
+	color: #333;
+	font-size: 1.8em;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.title p 
+{
+	max-width: 700px;
+	display: inline-block;
+}
+
+.title h2::before
+{
+	content: '';
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: -10px;
+	width: 60px;
+	height: 4px;
+	background: #000;
+}
+
+.title.white h2,
+.title.white p 
+{
+	color: #fff;
+}
+.title.white h2::before
+{
+	background: #fff;
+}
+
+.about
+{
+	background: #000;
+}
+
+.about .content
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.about .content .textBx
+{
+	min-width: 49%;
+	width: 49%;
+}
+
+.about .content .textBx p
+{
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.2rem
+}
+
+.about .content .imgBx
+{
+	margin-left: 40px;
+}
+
+.about .content .imgBx img
+{
+	height: 300px;
+	width: 350px;
+}
+
+.services .content
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+.services .content .servicesBx
+{
+	padding: 40px 20px;
+	max-width: 500px;
+	margin: 10px;
+	text-align: center;
+	transition: transform .5s;
+}
+
+.services .content .servicesBx:hover 
+{
+	background: #333;
+	color: #fff;
+	transition: .5s;
+}
+
+.services .content .servicesBx img 
+{
+	height: 100px;
+	width: 100px;
+}
+
+.services .content .servicesBx h2 
+{
+	font-weight: bold;
+}
+
+.services .content .servicesBx p
+{
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.work
+{
+	background: #000;
+}
+
+.work .title h2
+{
+	color: #fff;
+	font-weight: bold;
+}
+
+.work .title p
+{
+	color: #fff;
+	font-weight: 300;
+}
+
+.work .content
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	color: #fff;
+}
+
+.work .content .workBx
+{
+	margin: 20px;
+	text-align: center;
+}
+
+.work .content .workBx .imgBx img 
+{
+	height: 200px;
+	width: 300px;
+	border: 1px solid #333;
+	object-fit: cover;
+}
+
+.contact .title p
+{
+	color: #333;
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 1.5rem;
+}
+
+.contact h4
+{
+	font-size: 25px;
+}
+
+.contact .content
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.contact .content .contactBx
+{
+	text-align: center;
+	height: 100px;
+	margin: 20px;
+}
+
+.contact .content .contactBx p a
+{
+	padding: 0 5px;
+}
+
+/*.contact .content .contactBx .info
+{
+	display: flex;
+	flex-direction: column;
+}*/
+
+.contact .content .contactBx p a .fab,
+.contact .content .contactBx p a .fas,
+.contact .content .contactBx p a .far
+{
+	transition: transform .5s;
+	font-size: 25px;
+	color: #333;
+}
+
+.contact .content .contactBx p a .fab:hover,
+.contact .content .contactBx p a .fas:hover,
+.contact .content .contactBx p a .far:hover
+{
+	color: #6495ed;
+	transition: .5s;
+}
+
+.copyright
+{
+	text-align: center;
+	width: 100%;
+}
+
+.copyright p 
+{
+	font-size: 18px;
+}
+
+.copyright p a 
+{
+	text-decoration: none;
+	font-size: 18px;
+	color: #6495ed;
+}
+
+.copyright p a:hover
+{
+	color: #333;
+}
